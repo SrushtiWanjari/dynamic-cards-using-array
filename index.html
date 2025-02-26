@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    body{
-        background-color: #E50046;
+  </head>
+  <style>
+    body {
+      background-color: #e50046;
     }
-    .heading{
-        text-align: center;
-        font-size: 50px;
-        color: #C7DB9C;
+    .heading {
+      text-align: center;
+      font-size: 50px;
+      color: #c7db9c;
     }
-    .student-info{
-        padding: 5px;
-        margin: 6px;
-        border: 1px solid black;
-        border-radius: 5px;
-        background-color: #FDAB9E;
+    .student-info {
+      padding: 5px;
+      margin: 6px;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #fdab9e;
     }
-    .student-card{
-        padding: 5px;
-        margin: 20px 10px;
-        border: 1px dashed black;
-        border-radius: 5px;
-        background-color: #FFF0BD;
-        font-size: 20px;
+    .student-card {
+      padding: 5px;
+      margin: 20px 10px;
+      border: 1px dashed black;
+      border-radius: 5px;
+      background-color: #fff0bd;
+      font-size: 20px;
     }
-
-</style>
-<body>
+  </style>
+  <body>
     <div>
-    <h1 class="heading">Student List</h1>
-    <div class="student-info" id="student-list"></div>
-</div>
+      <h1 class="heading">Student List</h1>
+      <div class="student-info" id="student-list"></div>
+    </div>
 
-<script>
-    const students = [
+    <script>
+      const students = [
         "Archana",
         "Sakshi",
         "Deepa",
@@ -46,16 +45,18 @@
         "Jiya",
         "Miya",
         "Siya",
-        "Tiya"
-    ];
+        "Tiya",
+      ];
 
-    const studentElement = document.getElementById("student-list");
+      students.push("Rohit");
 
-    for(let i=0; i<students.length; i++){
-        studentElement.innerHTML =  
-        studentElement.innerHTML + 
-        `<div class="student-card">Welcome ${students[i]}</div>`;
-    }
-</script>
-</body>
+      const studentElement = document.getElementById("student-list");
+
+      for (let i = 0; i < students.length; i++) {
+        studentElement.innerHTML =
+          studentElement.innerHTML +
+          `<div class="student-card">Welcome ${students[i]}</div>`;
+      }
+    </script>
+  </body>
 </html>
