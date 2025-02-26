@@ -12,20 +12,50 @@
     .heading{
         text-align: center;
         font-size: 50px;
-        color: #FFF0BD;
+        color: #C7DB9C;
     }
     .student-info{
         padding: 5px;
         margin: 6px;
-        border: 1px dashed black;
+        border: 1px solid black;
         border-radius: 5px;
         background-color: #FDAB9E;
     }
+    .student-card{
+        padding: 5px;
+        margin: 20px 10px;
+        border: 1px dashed black;
+        border-radius: 5px;
+        background-color: #FFF0BD;
+        font-size: 20px;
+    }
+
 </style>
 <body>
     <div>
     <h1 class="heading">Student List</h1>
-    <div class="student-info"></div>
+    <div class="student-info" id="student-list"></div>
 </div>
+
+<script>
+    const students = [
+        "Archana",
+        "Sakshi",
+        "Deepa",
+        "Rekha",
+        "Jiya",
+        "Miya",
+        "Siya",
+        "Tiya"
+    ];
+
+    const studentElement = document.getElementById("student-list");
+
+    for(let i=0; i<students.length; i++){
+        studentElement.innerHTML =  
+        studentElement.innerHTML + 
+        `<div class="student-card">Welcome ${students[i]}</div>`;
+    }
+</script>
 </body>
 </html>
